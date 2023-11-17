@@ -2,37 +2,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	const dropdownList = document.querySelectorAll('.dropdown')
 	if(!dropdownList.length) return
 
-	dropdownList.forEach((select) => {
-		select.addEventListener('click', (evt) => {
-			evt.stopPropagation()
-			//closeAllDropdowns()
-			if(!evt.target.closest('.dropdown__list-box')) {
-				select.classList.toggle('dropdown--active')
+	dropdownList.forEach((dropdown) => {
+		dropdown.querySelector('.dropdown__current-box').addEventListener('click', () => {
+			const active = document.querySelector('.dropdown--active')
+			if(active && dropdown !== active) {
+				active.classList.remove('dropdown--active')
 			}
+			dropdown.classList.toggle('dropdown--active')
 		})
 
-		const current = select.querySelector('.dropdown__value')
-		const input = select.querySelector('.dropdown__input')
-		const dropdownItems = select.querySelectorAll('.dropdown__list-item')
+		const current = dropdown.querySelector('.dropdown__value')
+		const input = dropdown.querySelector('.dropdown__input')
+		const dropdownItems = dropdown.querySelectorAll('.dropdown__list-item')
 
 		dropdownItems.forEach((item)=>{
 			item.addEventListener('click', () => {
 				current.innerHTML = item.innerHTML
 				input.value = item.querySelector('.dropdown__title').innerText
-				const oldSelected = select.querySelector('.dropdown__list-item--selected')
+				const oldSelected = dropdown.querySelector('.dropdown__list-item--selected')
 				oldSelected.classList.remove('dropdown__list-item--selected')
 				item.classList.add('dropdown__list-item--selected')
-				closeAllDropdowns()
+				item.closest('.dropdown').classList.remove('dropdown--active')
 			})
 		})
 	})
 
-	document.addEventListener('click', closeAllDropdowns)
+	document.addEventListener('click', (evt) => closeAllDropdowns(evt))
 
-	function closeAllDropdowns() {
-		const activeList = document.querySelectorAll('.dropdown--active')
-		dropdownList.forEach((dropdown) => {
-			dropdown.classList.remove('dropdown--active')
-		})
+	function closeAllDropdowns(evt) {
+		if(!evt?.target.closest('.dropdown')) {
+			const activeList = document.querySelectorAll('.dropdown--active')
+			activeList.forEach((dropdown) => {
+				dropdown.classList.remove('dropdown--active')
+			})
+		}
 	}
 })
