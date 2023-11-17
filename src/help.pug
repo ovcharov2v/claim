@@ -1,0 +1,29 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Справочная информация"
+
+block content
+	+breadcrumbs(['Главная'], 'Подготовка новой жалобы')
+	// Section help
+	section.section-help.container.container--content
+		h1.heading1.section-help__title Справочная информация
+		.section-help__grid
+			.panel.section-help__panel
+				a.section-help__link(href="#", download)
+					.section-help__link-icon-box
+						+svg("download")(class="section-help__link-icon")
+					span.section-help__link-text Инструкция по регистрации жалобы. PDF
+			.panel.section-help__panel
+				a.section-help__link(href="#", download)
+					.section-help__link-icon-box
+						+svg("download")(class="section-help__link-icon")
+					span.section-help__link-text Руководство пользователя. PDF
+			.panel.section-help__panel
+				a.section-help__link(href="#", download)
+					.section-help__link-icon-box
+						+svg("download")(class="section-help__link-icon")
+					span.section-help__link-text Правила пользования cистемой. PDF

@@ -1,0 +1,273 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Главная"
+
+block content
+	+breadcrumbs(['Главная'], 'Подготовка новой жалобы')
+	+pagenav()
+	// Section form
+	section.section-form.container.container--content
+		h1.heading1.section-form__title Подготовка новой жалобы
+		p.section-form__text Поля с полужирным заголовком обязательны для отправки жалобы
+		// Form block
+		section.section-form__block
+			h2.section-form__block-title Атрибуты жалобы
+			.panel
+				.panel__row
+					// Form group
+					.form-group
+						label.form-group__label Арбитражный суд *
+						// Dropdown
+						.dropdown.form-group__input-box
+							.dropdown__current-box
+								input.dropdown__input(type='hidden', value='Арбитражный суд города Санкт-Петербурга и Ленинградской области')
+								.dropdown__current
+									.dropdown__value
+										p.dropdown__title Арбитражный суд города Санкт-Петербурга и Ленинградской области
+									+svg("chevron")(class="dropdown__chevron")
+							.dropdown__list-box
+								.dropdown__search
+									.dropdown__search-box
+										button.dropdown__search-button(aria-label="Поиск")
+											+svg("search")(class="dropdown__search-icon")
+										input.dropdown__search-input(type="search", placeholder="Поиск")
+								ul.dropdown__list
+									li.dropdown__letter А
+									li.dropdown__list-item.dropdown__list-item--selected
+										p.dropdown__title Арбитражный суд города Санкт-Петербурга и Ленинградской области
+										p.dropdown__description г. Майкоп, ул. Жуковского, 32
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Адыгея
+										p.dropdown__description г. Майкоп, ул. Жуковского, 32
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Алтай
+										p.dropdown__description г. Горно-Алтайск, пер. Центральный, 3
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Башкортостан
+										p.dropdown__description г. Уфа, ул. Пушкина, д. 88/1
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Бурятия
+										p.dropdown__description г. Улан-Удэ, ул. Коммунистическая, 51
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Дагестан
+										p.dropdown__description г. Махачкала, ул. Даниялова, 22
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Донецкой Народной Республики
+										p.dropdown__description г. Уфа, ул. Пушкина, д. 88/1
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный судРеспублики Ингушетия
+										p.dropdown__description г. Улан-Удэ, ул. Коммунистическая, 51
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Кабардино-Балкарской Республики
+										p.dropdown__description г. Махачкала, ул. Даниялова, 22
+									li.dropdown__letter Б
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Республики Дагестан
+										p.dropdown__description г. Махачкала, ул. Даниялова, 22
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Донецкой Народной Республики
+										p.dropdown__description г. Уфа, ул. Пушкина, д. 88/1
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный судРеспублики Ингушетия
+										p.dropdown__description г. Улан-Удэ, ул. Коммунистическая, 51
+									li.dropdown__list-item
+										p.dropdown__title Арбитражный суд Кабардино-Балкарской Республики
+										p.dropdown__description г. Махачкала, ул. Даниялова, 22
+
+						p.form-group__note Выберите из списка суд в который направляется жалоба
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label ФИО должностного лица, на кого жалоба
+						// Dropdown
+						.dropdown.form-group__input-box
+							.dropdown__current-box
+								input.dropdown__input(type='hidden', value='Голота Светлана Ивановна')
+								.dropdown__current
+									.dropdown__value
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 1 разряда ЕТКС
+									+svg("chevron")(class="dropdown__chevron")
+							.dropdown__list-box
+								ul.dropdown__list
+									li.dropdown__list-item.dropdown__list-item--selected
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 1 разряда ЕТКС
+									li.dropdown__list-item
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 2 разряда ЕТКС
+									li.dropdown__list-item
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 3 разряда ЕТКС
+									li.dropdown__list-item
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 4 разряда ЕТКС
+									li.dropdown__list-item
+										p.dropdown__title Голота Светлана Ивановна
+										p.dropdown__description Гардеробщик 5 разряда ЕТКС
+				.panel__row.panel__row--cols2
+					button.button-add
+						+svg("add")(class="button-add__icon")
+						| Добавить ещё человека
+				.panel__row
+					// Form group
+					.form-group
+						label.form-group__label Предмет жалобы*
+						// Dropdown
+						.dropdown.form-group__input-box
+							.dropdown__current-box
+								input.dropdown__input(type='hidden', value='Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств')
+								.dropdown__current
+									.dropdown__value
+										p.dropdown__title Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств
+									+svg("chevron")(class="dropdown__chevron")
+							.dropdown__list-box
+								ul.dropdown__list
+									li.dropdown__list-item.dropdown__list-item--selected
+										p.dropdown__title Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств
+									li.dropdown__list-item
+										p.dropdown__title Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств 2
+									li.dropdown__list-item
+										p.dropdown__title Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств 3
+									li.dropdown__list-item
+										p.dropdown__title Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств 4
+				.panel__row.panel__row--cols2
+					.form-group
+						label.form-group__label Номер дела в первой инстанции
+						.form-group__input-box
+							input.form-group__input(type="text", value="A56-12334/2009")
+				.panel__row
+					div
+						// Form group
+						.form-group
+							label.form-group__label Текст жалобы
+							.form-group__input-box
+								textarea.form-group__input.form-group__input--textarea
+								p.form-group__note 275 символов осталось
+						.panel__checkbox-group
+							label.checkbox.panel__checkbox
+								input.checkbox__input(type="checkbox")
+								span.checkbox__text Жалоба подаётся от лица коллектива
+							label.checkbox.panel__checkbox
+								input.checkbox__input(type="checkbox")
+								span.checkbox__text Централизованная публикация
+				// Filedrop
+				label.filedrop
+					p.filedrop__label-text Вложения
+					input.filedrop__input(type="file")
+					.filedrop__content
+						p.filedrop__text Перетащите сюда  или выберите материалы, имеющие отношение к жалобе. Фото, документы и пр.
+						.filedrop__file
+							+svg("attachment")(class="filedrop__file-icon")
+							span.filedrop__file-text Выбрать файл
+
+		section.section-form__block
+			h2.section-form__block-title Реквизиты заявителя
+			.section-form__radios
+				p.section-form__radios-text Заявитель
+				.section-form__radios-row
+					label.radio.section-form__radios-elem
+						input.radio__input(type="radio", name="r1")
+						span.radio__text Юридическое лицо (организация)
+					label.radio.section-form__radios-elem
+						input.radio__input(type="radio", name="r1",checked)
+						span.radio__text Физическое лицо (гражданин)
+			.panel.section-form__block-panel
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label ФИО заявителя
+						.form-group__input-box
+							input.form-group__input(type="text", value="Иванюк Константин Константинович")
+					// Form group
+					.form-group
+						label.form-group__label Контактное лицо
+						.form-group__input-box
+							input.form-group__input(type="text", value="Иванюк Константин Константинович")
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label Телефон
+						.form-group__input-box
+							input.form-group__input(type="tel", value="1234567890")
+						p.form-group__note например: е +74951234567
+					// Form group
+					.form-group
+						label.form-group__label Адрес эл. почты
+						.form-group__input-box
+							input.form-group__input(type="email", value="1234567890")
+						p.form-group__note например example@example.com
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label Контактное лицо
+						.form-group__input-box
+							input.form-group__input(type="text", value="ООО Северное сияние")
+					// Form group
+					.form-group
+						label.form-group__label ИНН
+						.form-group__input-box
+							input.form-group__input(type="text", value="1234567890")
+
+			// Panel
+			.panel.section-form__block-panel
+				h3.panel__title Почтовый адрес
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label Страна
+						.form-group__input-box
+							input.form-group__input(type="text", value="РОССИЯ")
+					// Form group
+					.form-group
+						label.form-group__label Индекс
+						.form-group__input-box
+							input.form-group__input(type="text", value="410000")
+				.panel__row.panel__row--cols2
+					// Form group
+					.form-group
+						label.form-group__label Населенный пункт:
+						.form-group__input-box
+							input.form-group__input(type="text", value="Село Красное")
+					// Form group
+					.form-group
+						label.form-group__label Улица
+						.form-group__input-box
+							input.form-group__input(type="text", value="50 лет победы")
+				.panel__row.panel__row--cols3
+					// Form group
+					.form-group
+						label.form-group__label Дом
+						.form-group__input-box
+							input.form-group__input(type="text", value="22")
+					// Form group
+					.form-group
+						label.form-group__label Корпус
+						.form-group__input-box
+							input.form-group__input(type="text", value="1")
+					// Form group
+					.form-group
+						label.form-group__label Офис/квартира
+						.form-group__input-box
+							input.form-group__input(type="text", value="3")
+			label.checkbox.panel__checkbox
+				input.checkbox__input(type="checkbox", checked)
+				span.checkbox__text Я согласен получать ответ из арбитражного суда в электронном виде, мне не требуется высылать экземпляр ответа на бумаге
+		.section-form__action-row
+			button.button.button--blue-light.section-form__action
+				+svg("save")(class="button__icon")
+				|Сохранить
+			button.button.button--blue.section-form__action
+				+svg("email")(class="button__icon")
+				| Отправить
+
+
+
+
+
+
+

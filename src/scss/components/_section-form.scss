@@ -1,0 +1,76 @@
+.section-form {
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	&__block {
+		margin-bottom: 30px;
+	}
+
+	&__block-panel {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__block-title {
+		margin-bottom: 16px;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 600;
+
+		@include desktop {
+			font-size: 20px;
+			line-height: 27px;
+		}
+	}
+
+	&__block-text {
+	}
+
+	&__radios {
+		margin-bottom: 15px;
+	}
+
+	&__radios-text {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 8px;
+	}
+
+	&__radios-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px -8px;
+	}
+
+	&__radios-elem {
+		margin: 0 16px 8px;
+	}
+
+	&__action-row {
+		display: flex;
+		flex-direction: column;
+		margin: 30px -8px -10px;
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+
+	&__action {
+		width: 100%;
+		margin: 0 8px 10px;
+
+		@include desktop {
+			width: auto;
+		}
+	}
+}

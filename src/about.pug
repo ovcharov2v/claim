@@ -1,0 +1,36 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "О системе"
+
+block content
+	+breadcrumbs(['Главная'], 'Подготовка новой жалобы')
+	// Section about
+	section.section-about.container.container--content
+		.section-about__header
+			h1.heading1.section-about__title О системе
+			p.section-about__text Добро пожаловать в Систему подачи жалоб на действия судей и работников аппаратов арбитражных судов.
+			p.section-about__text Данная система предназначена для увеличения скорости обработки Ваших жалоб в арбитражных судах Российской Федерации за счет использования современных телекоммуникационных технологий.
+			p.section-about__text Отправка жалобы в арбитражный суд в электронном виде с использованием данного сервиса не требует направления оригинала жалобы нарочным или почтой.
+
+		.section-about__button-box
+			p.section-about__text.section-about__text--center Для того чтобы воспользоваться услугами системы,
+				|
+				|
+				a.section-about__text-link(href="#") зарегистрируйтесь.
+			a.button.button--blue.section-about__button(href="#")
+				+svg("user")(class="button__icon")
+				| Регистрация нового пользователя
+
+		.section-about__link-box
+			a.section-about__link(href="#") Восстановить пароль
+			a.section-about__link(href="#") Войти в систему
+			a.section-about__link(href="#") Повторная активация
+		.panel.section-about__panel
+			ul.section-about__list
+				li.section-about__list-elem При работе с системой на указанные Вами адреса электронной почты будут приходить информационные письма с адреса spg_informer@arbitr.ru. Не забудьте настроить спам-фильтр Вашего почтового клиента, добавив указанный адрес в список доверенных адресов.
+				li.section-about__list-elem Если у Вас есть предложения по функционированию системы или Вы обнаружили ошибку в работе системы, обращайтесь по адресу arbitr@iac.cdep.ru
+				li.section-about__list-elem Рекомендуется при работе с системой пользоваться браузерами следующих версий и выше: Internet Explorer 8, Opera 10, Firefox 3.5, Chrome 3.0, Safari 4.0.

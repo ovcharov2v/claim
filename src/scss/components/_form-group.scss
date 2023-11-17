@@ -1,0 +1,91 @@
+.form-group {
+	&__label {
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 600;
+	}
+
+	&__input-box {
+		position: relative;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		min-width: 0;
+		padding: 10px 15px;
+		font-size: 16px;
+		line-height: 24px;
+		background-color: #F3F6FC;
+		border: 1px solid $color-stroke-blue;
+		border-radius: 4px;
+
+		&--textarea {
+			height: 128px;
+			resize: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		.form-group--password & {
+			padding-right: 40px;
+		}
+	}
+
+	&__show-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		width: 40px;
+		height: 100%;
+		border-radius: 4px;
+		background: none;
+		border: none;
+		color: $color-blue;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 6px;
+			width: 24px;
+			height: 2px;
+			background-color: currentColor;
+			transform: translateY(-50%) rotate(-45deg);
+			content: "";
+			opacity: 0;
+			transition: opacity $transition-default;
+		}
+
+		.form-group--password-show & {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__show-btn-icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__note {
+		margin-top: 5px;
+		font-size: 12px;
+		line-height: 16px;
+		color: $color-cloud;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 600;
+		color: $color-blue;
+		text-align: right;
+	}
+}

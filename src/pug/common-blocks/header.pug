@@ -1,2 +1,61 @@
 mixin header()
 	header.header
+		.header__top
+			.container
+				.header__top-content
+					time.header__date.header__date--mobile 10.04.2023
+					time.header__date.header__date--desktop Сегодня 10 ноября 2023 г.
+					.header__profile
+						.header__profile-box
+							+svg("user")(class="header__profile-icon")
+							p.header__profile-name Иванов Павел Иванович
+							+svg("chevron")(class="header__profile-chevron")
+						.header__profile-dropdown
+							.header__profile-dropdown-content
+								.header__profile-user
+									.header__profile-user-icon-box
+										+svg("user")(class="header__profile-user-icon")
+									.header__profile-user-data
+										p.header__profile-user-name Иванов Павел Иванович
+										p.header__profile-user-email Ivanova.Irina@.ru
+								ul.header__profile-list
+									li.header__profile-elem
+										a.header__profile-link(href="#") Ваши данные
+									li.header__profile-elem
+										a.header__profile-link(href="#") Изменение пароля
+									li.header__profile-elem
+										a.header__profile-link(href="#") Выход из системы
+		.header__bottom
+			.container.header__bottom-container
+				a.header__logo-link(hef="./")
+					img.header__logo(src="images/logo.png", alt)
+					p.header__logo-text Система подачи жалоб на действия судей и работников аппаратов арбитражных судов
+				nav.header__nav
+					ul.header__nav-list
+						li.header__nav-elem.header__nav-elem--dropdown
+							span.header__nav-link Жалобы
+								+svg("chevron")(class="header__nav-chevron")
+							ul.header__subnav-list
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Подготовка жалобы
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Все (0)
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Сохраненные (0)
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Отправленные (0)
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Принятые к рассмотрению (0)
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Рассмотрение продлено (0)
+								li.header__subnav-elem
+									a.header__subnav-link(href="#") Отозванные и перенаправленные (0)
+						li.header__nav-elem
+							a.header__nav-link(href="#") Справка
+						li.header__nav-elem
+							a.header__nav-link(href="#") О системе
+
+
+
+
+

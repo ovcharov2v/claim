@@ -1,0 +1,88 @@
+.panel {
+	position: relative;
+	z-index: 0;
+	padding: 12px 15px 15px;
+	background-color: $color-white;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+
+	@include desktop {
+		width: 100%;
+		margin-left: 0;
+		padding: 17px 24px 24px;
+
+		&::before {
+			content: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 600;
+	}
+
+	&__row {
+		@include desktop-down {
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		@include desktop {
+			display: grid;
+			grid-gap: 30px 24px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		&--cols2 {
+			grid-template: auto / repeat(2, 1fr);
+		}
+
+		&--cols3 {
+			grid-template: auto / repeat(3, 1fr);
+		}
+	}
+
+	&__checkbox-group {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__checkbox {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__capcha-box {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	&__capcha {}
+	&__capcha-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 42px;
+		height: 42px;
+		margin-left: 12px;
+		background: none;
+		border: none;
+		padding: 0;
+		color: $color-blue;
+	}
+	&__capcha-btn-icon {
+		width: 24px;
+		height: 24px;
+	}
+}

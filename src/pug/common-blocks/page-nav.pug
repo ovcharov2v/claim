@@ -1,0 +1,47 @@
+mixin pagenav()
+	// Page nav
+	.container
+		.page-nav
+			ul.page-nav__list
+				li.page-nav__elem
+					a.page-nav__link.page-nav__link--active(href="#") Подготовка жалобы
+				li.page-nav__elem
+					a.page-nav__link(href="#") Все (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Сохраненные (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Отправленные (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Принятые к рассмотрению (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Рассмотрение продлено (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Отозванные и перенаправленные (0)
+				li.page-nav__elem
+					a.page-nav__link(href="#") Рассмотренные (0)
+			// Dropdown
+			.dropdown.dropdown--white-bg.page-nav__dropdown
+				.dropdown__current-box
+					input.dropdown__input(type='hidden', value='Подготовка жалобы')
+					.dropdown__current
+						.dropdown__value
+							p.dropdown__title Подготовка жалобы
+						+svg("chevron")(class="dropdown__chevron")
+				.dropdown__list-box
+					ul.dropdown__list
+						li.dropdown__list-item.dropdown__list-item--selected
+							a(href="#").dropdown__title Подготовка жалобы
+						li.dropdown__list-item
+							a(href="#").dropdown__title Все (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Сохраненные (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Отправленные (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Принятые к рассмотрению (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Рассмотрение продлено (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Отозванные и перенаправленные (0)
+						li.dropdown__list-item
+							a(href="#").dropdown__title Рассмотренные (0)

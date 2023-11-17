@@ -1,0 +1,41 @@
+.breadcrumbs {
+	display: none;
+
+	@include desktop {
+		display: block;
+		margin-top: 24px;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		display: flex;
+		font-size: 14px;
+		line-height: 1;
+		color: $color-cloud;
+	}
+
+	&__link {
+		transition: color $transition-default;
+		white-space: nowrap;
+
+		&:hover {
+			color: $color-text;
+		}
+	}
+
+	&__current {
+		white-space: nowrap;
+	}
+
+	&__devider {
+		margin: 0 4px;
+
+		&::before {
+			content: '/';
+		}
+	}
+}

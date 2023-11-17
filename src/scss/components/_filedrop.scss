@@ -1,0 +1,47 @@
+.filedrop {
+	font-size: 14px;
+	line-height: 1;
+
+	&__label-text {
+		margin-bottom: 8px;
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	&__input {
+		display: none;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 25px;
+		border: 2px dashed $color-blue;
+		border-radius: 8px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	&__text {
+		max-width: 400px;
+		margin-bottom: 10px;
+	}
+
+	&__file {
+		display: inline-flex;
+		align-items: center;
+		color: $color-blue;
+	}
+
+	&__file-icon {
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+
+	&__file-text {
+	}
+}

@@ -1,0 +1,60 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Ваши данные"
+
+block content
+	+breadcrumbs(['Главная'], 'Ваши данные')
+
+	// Section form
+	section.section-auth.container.container--content
+		.section-auth__header
+			h1.heading1.section-auth__title Ваши данные
+			p.section-auth__text подзаголовок
+
+		.panel
+			.panel__row.panel__row--cols2
+				// Form group
+				.form-group
+					label.form-group__label Фамилия*
+					.form-group__input-box
+						input.form-group__input(type="text", value="Константиновский")
+				// Form group
+				.form-group
+					label.form-group__label Имя*
+					.form-group__input-box
+						input.form-group__input(type="text", value="Виктор")
+			.panel__row.panel__row--cols2
+				// Form group
+				.form-group
+					label.form-group__label Отчество
+					.form-group__input-box
+						input.form-group__input(type="text", value="Константинович")
+			.panel__row.panel__row--cols2
+				// Form group
+				.form-group
+					label.form-group__label Адрес эл. почты*
+					.form-group__input-box
+						input.form-group__input(type="email", value="example@example.com")
+					p.form-group__note например example@example.com
+				// Form group
+				.form-group
+					label.form-group__label Наименование организации:
+					.form-group__input-box
+						input.form-group__input(type="text", value="Кактус")
+			.panel__row.panel__row--cols2
+				// Form group
+				.form-group.form-group--password
+					label.form-group__label Действующий пароль*
+					.form-group__input-box
+						input.form-group__input(type="password", value="3242351342334")
+						button.form-group__show-btn(aria-label="Показать пароль")
+							+svg("eye")(class="form-group__show-btn-icon")
+					p.form-group__note для подтверждения изменений
+		button.button.button--blue.section-auth__action
+			+svg("save")(class="button__icon")
+			| Сохранить
+

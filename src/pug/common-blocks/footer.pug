@@ -1,2 +1,9 @@
 mixin footer()
-	footer.footer.container
+	footer.footer
+		.container.footer__container
+			a.footer__logo-link(href="./")
+				img.footer__logo(src="images/logo.png", alt)
+				p.footer__logo-text Система подачи жалоб на действия судей и работников аппаратов арбитражных судов
+			.footer__info-box
+				a.footer__error-link.footer__info-box-elem(href="#") Сообщить об ошибке
+				p.footer__version.footer__info-box-elem Версия 03, 2023г.

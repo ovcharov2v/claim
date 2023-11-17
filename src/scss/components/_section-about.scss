@@ -1,0 +1,84 @@
+.section-about {
+	padding-top: 30px;
+
+	&__header {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: 10px;
+
+		&--text {
+			text-align: center;
+		}
+	}
+
+	&__link-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 -7px 25px;
+
+		@include desktop {
+			flex-direction: row;
+		}
+	}
+
+	&__link {
+		margin: 0 7px 15px;
+		color: $color-blue;
+		text-decoration: underline;
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__text-link {
+		color: $color-blue;
+		text-decoration: none;
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__button-box {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__list {
+		font-weight: 600;
+		color: $color-blue;
+	}
+
+	&__list-elem {
+		position: relative;
+		padding-left: 14px;
+
+		&::before {
+			position: absolute;
+			top: 10px;
+			left: 0;
+			width: 4px;
+			height: 4px;
+			background-color: $color-blue;
+			border-radius: 50%;
+			content: "";
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+}

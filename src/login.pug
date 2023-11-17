@@ -1,0 +1,43 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Вход в систему"
+
+block content
+	+breadcrumbs(['Главная'], 'Ваши данные')
+
+	// Section form
+	section.section-auth.container.container--content
+		.section-auth__header
+			h1.heading1.section-auth__title Вход в систему
+			p.section-auth__text Не зарегистрированы?
+				|
+				|
+				a.section-auth__text-link(href="#") Зарегистрируйтесь.
+
+		.panel.section-auth__panel
+			.panel__row
+				// Form group
+				.form-group
+					label.form-group__label Электронная почта
+					.form-group__input-box
+						input.form-group__input(type="email", value="example@example.com")
+					p.form-group__note например example@example.com
+			.panel__row
+				// Form group
+				.form-group.form-group--password
+					label.form-group__label Пароль
+					.form-group__input-box
+						input.form-group__input(type="password", value="3242351342334")
+						button.form-group__show-btn(aria-label="Показать пароль")
+							+svg("eye")(class="form-group__show-btn-icon")
+					p.form-group__link
+						a(href="#") Забыли пароль?
+			label.checkbox.panel__checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__text Запомнить пароль
+		button.button.button--blue.section-auth__action Войти
+

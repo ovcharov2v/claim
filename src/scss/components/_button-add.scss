@@ -1,0 +1,21 @@
+.button-add {
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	border: 2px dashed $color-blue;
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 600;
+	color: $color-blue;
+
+	&__icon {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+}

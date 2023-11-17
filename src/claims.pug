@@ -1,0 +1,177 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Все жалобы"
+
+block content
+	+breadcrumbs(['Главная'], 'Подготовка новой жалобы')
+	+pagenav()
+	// Section claim
+	section.section-claim.container
+		h2.heading1.section-claim__title Отправленные жалобы (1)
+		.section-claim__table-box
+			table.section-claim__table
+				tr.section-claim__table-row
+					th.section-claim__table-header.section-claim__table-header--number Номер
+					th.section-claim__table-header.section-claim__table-header--date Дата отправки
+					th.section-claim__table-header.section-claim__table-header--days До принятия решения
+					th.section-claim__table-header.section-claim__table-header--persons Должностные лица
+					th.section-claim__table-header.section-claim__table-header--subject Предмет жалобы
+					th.section-claim__table-header.section-claim__table-header--actions Действия
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell 30 дней
+					td.section-claim__table-cell
+						|Голота Светлана Ивановна
+						br
+						|Иванов Павел Иванович
+					td.section-claim__table-cell Иное
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+							button.section-claim__table-action
+								+svg("edit")(class="section-claim__table-action-icon")
+							button.section-claim__table-action
+								+svg("delete")(class="section-claim__table-action-icon")
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell 30 дней
+					td.section-claim__table-cell
+						| Голота Светлана Ивановна
+						br
+						| Иванов Павел Иванович
+					td.section-claim__table-cell Иное
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+
+	// Section claim
+	section.section-claim.container
+		h2.heading1.section-claim__title Отозванные и перенаправленные жалобы (1)
+		.section-claim__table-box
+			table.section-claim__table
+				tr.section-claim__table-row
+					th.section-claim__table-header.section-claim__table-header--number Номер
+					th.section-claim__table-header.section-claim__table-header--date Дата рассмотрения
+					th.section-claim__table-header.section-claim__table-header--persons Должностные лица
+					th.section-claim__table-header.section-claim__table-header--subject Предмет жалобы
+					th.section-claim__table-header.section-claim__table-header--result Результат рассмотрения
+					th.section-claim__table-header.section-claim__table-header--actions Действия
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell
+						|Голота Светлана Ивановна
+						br
+						|Иванов Павел Иванович
+					td.section-claim__table-cell Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств
+					td.section-claim__table-cell Отозвана
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+							button.section-claim__table-action
+								+svg("edit")(class="section-claim__table-action-icon")
+							button.section-claim__table-action
+								+svg("delete")(class="section-claim__table-action-icon")
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell
+						| Голота Светлана Ивановна
+						br
+						| Иванов Павел Иванович
+					td.section-claim__table-cell Нарушение судейской этики
+					td.section-claim__table-cell Отозвана
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+	// Section claim
+	section.section-claim.container
+		h2.heading1.section-claim__title Принятые к рассмотрению жалобы (0)
+		.section-claim__table-box
+			table.section-claim__table
+				tr.section-claim__table-row
+					th.section-claim__table-header.section-claim__table-header--number Номер
+					th.section-claim__table-header.section-claim__table-header--date Дата рассмотрения
+					th.section-claim__table-header.section-claim__table-header--persons Должностные лица
+					th.section-claim__table-header.section-claim__table-header--subject Предмет жалобы
+					th.section-claim__table-header.section-claim__table-header--result Результат рассмотрения
+					th.section-claim__table-header.section-claim__table-header--actions Действия
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell
+						|Голота Светлана Ивановна
+						br
+						|Иванов Павел Иванович
+					td.section-claim__table-cell Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств
+					td.section-claim__table-cell Отозвана
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell
+						| Голота Светлана Ивановна
+						br
+						| Иванов Павел Иванович
+					td.section-claim__table-cell Нарушение судейской этики
+					td.section-claim__table-cell Отозвана
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")
+	// Section claim
+	section.section-claim.container
+		h2.heading1.section-claim__title Жалобы, рассмотрение которых продлено (0)
+		.section-claim__table-box
+			table.section-claim__table
+				tr.section-claim__table-row
+					th.section-claim__table-header.section-claim__table-header--number Номер
+					th.section-claim__table-header.section-claim__table-header--date Дата рассмотрения
+						br
+						|(новая)
+					th.section-claim__table-header.section-claim__table-header--persons Должностные лица
+					th.section-claim__table-header.section-claim__table-header--subject Предмет жалобы
+					th.section-claim__table-header.section-claim__table-header--result Результат рассмотрения
+					th.section-claim__table-header.section-claim__table-header--actions Действия
+				tr.section-claim__table-row
+					td.section-claim__table-cell(colspan="6") Нет жалоб
+
+	// Section claim
+	section.section-claim.container
+		h2.heading1.section-claim__title Рассмотренные жалобы (0)
+		.section-claim__table-box
+			table.section-claim__table
+				tr.section-claim__table-row
+					th.section-claim__table-header.section-claim__table-header--number Номер
+					th.section-claim__table-header.section-claim__table-header--date Дата рассмотрения
+					th.section-claim__table-header.section-claim__table-header--persons Должностные лица
+					th.section-claim__table-header.section-claim__table-header--subject Предмет жалобы
+					th.section-claim__table-header.section-claim__table-header--result Результат рассмотрения
+					th.section-claim__table-header.section-claim__table-header--actions Действия
+				tr.section-claim__table-row
+					td.section-claim__table-cell Ж-А05-11/23
+					td.section-claim__table-cell 08.11.2023
+					td.section-claim__table-cell
+						| Голота Светлана Ивановна
+						br
+						| Иванов Павел Иванович
+					td.section-claim__table-cell Нарушение процессуальных норм при рассмотрении дел: отказ в удовлетворении ходатайств
+					td.section-claim__table-cell
+						a.section-claim__table-link(href="#", download) Скачать документ
+					td.section-claim__table-cell
+						.section-claim__table-actions
+							button.section-claim__table-action
+								+svg("eye")(class="section-claim__table-action-icon")

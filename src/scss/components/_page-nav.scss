@@ -1,0 +1,46 @@
+.page-nav {
+	margin-top: 15px;
+	margin-bottom: 50px;
+
+	@include desktop {
+		margin-top: 0;
+	}
+
+	&__list {
+		display: none;
+		flex-wrap: wrap;
+		margin: 0 -5px;
+
+		@include desktop {
+			display: flex;
+		}
+	}
+
+	&__elem {
+		margin: 0 5px 11px;
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: $color-white;
+		border: 1px solid currentColor;
+		border-radius: 50px;
+		font-size: 14px;
+		line-height: 19px;
+		font-weight: 600;
+		white-space: nowrap;
+		color: $color-cloud;
+		transition: color $transition-default, border-color $transition-default;
+
+		&:hover,
+		&--active {
+			color: $color-storm;
+		}
+	}
+	&__dropdown {
+		@include desktop {
+			display: none;
+		}
+	}
+}

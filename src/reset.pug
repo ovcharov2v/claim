@@ -1,0 +1,39 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Восстановление пароля"
+
+block content
+	+breadcrumbs(['Главная'], 'Ваши данные')
+
+	// Section form
+	section.section-auth.container.container--content
+		.section-auth__header
+			h1.heading1.section-auth__title Восстановление пароля
+			p.section-auth__text Введите адрес электронной почты, который был указан при регистрации.
+				br
+				|На этот адрес будет выслано письмо для восстановления.
+
+		.panel.section-auth__panel
+			.panel__row
+				// Form group
+				.form-group
+					label.form-group__label Электронная почта
+					.form-group__input-box
+						input.form-group__input(type="email", value="example@example.com")
+					p.form-group__note например example@example.com
+			.panel__capcha-box
+				img.panel__capcha(src="images/capcha.jpg", alt)
+				button.panel__capcha-btn(aria-label="capcha")
+					+svg("reload")(class="panel__capcha-btn-icon")
+			.panel__row
+				// Form group
+				.form-group
+					label.form-group__label Введите изображенные буквы и цифры
+					.form-group__input-box
+						input.form-group__input(type="text", value="487606114")
+		button.button.button--blue.section-auth__action Восстановить
+

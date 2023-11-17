@@ -4,7 +4,30 @@ prepend vars
 	//-
 
 append vars
-	- title = "Main page"
+	- title = "Страницы"
 
 block content
-	h1 Claim
+	.container.container--content
+		ul(style="text-align: center; margin: 80px 0;")
+			li
+				a(href="main1.html", target="_blank") Главная (юр лицо)
+			li
+				a(href="main2.html", target="_blank") Главная (физ лицо)
+			li
+				a(href="claims.html", target="_blank") Все жалобы
+			li
+				a(href="claim.html", target="_blank") Жалобы
+			li
+				a(href="about.html", target="_blank") О системе
+			li
+				a(href="rules.html", target="_blank") Правила
+			li
+				a(href="help.html", target="_blank") Справочная информация
+			li
+				a(href="user.html", target="_blank") Пользователь
+			li
+				a(href="login.html", target="_blank") Логин
+			li
+				a(href="reset.html", target="_blank") Сброс пароля
+			li
+				a(href="password.html", target="_blank") Изменение пароля
