@@ -96,34 +96,38 @@
 document.addEventListener('DOMContentLoaded', function () {
   var dropdownList = document.querySelectorAll('.dropdown');
   if (!dropdownList.length) return;
-  dropdownList.forEach(function (select) {
-    select.addEventListener('click', function (evt) {
-      evt.stopPropagation();
-      //closeAllDropdowns()
-      if (!evt.target.closest('.dropdown__list-box')) {
-        select.classList.toggle('dropdown--active');
+  dropdownList.forEach(function (dropdown) {
+    dropdown.querySelector('.dropdown__current-box').addEventListener('click', function () {
+      var active = document.querySelector('.dropdown--active');
+      if (active && dropdown !== active) {
+        active.classList.remove('dropdown--active');
       }
+      dropdown.classList.toggle('dropdown--active');
     });
-    var current = select.querySelector('.dropdown__value');
-    var input = select.querySelector('.dropdown__input');
-    var dropdownItems = select.querySelectorAll('.dropdown__list-item');
+    var current = dropdown.querySelector('.dropdown__value');
+    var input = dropdown.querySelector('.dropdown__input');
+    var dropdownItems = dropdown.querySelectorAll('.dropdown__list-item');
     dropdownItems.forEach(function (item) {
       item.addEventListener('click', function () {
         current.innerHTML = item.innerHTML;
         input.value = item.querySelector('.dropdown__title').innerText;
-        var oldSelected = select.querySelector('.dropdown__list-item--selected');
+        var oldSelected = dropdown.querySelector('.dropdown__list-item--selected');
         oldSelected.classList.remove('dropdown__list-item--selected');
         item.classList.add('dropdown__list-item--selected');
-        closeAllDropdowns();
+        item.closest('.dropdown').classList.remove('dropdown--active');
       });
     });
   });
-  document.addEventListener('click', closeAllDropdowns);
-  function closeAllDropdowns() {
-    var activeList = document.querySelectorAll('.dropdown--active');
-    dropdownList.forEach(function (dropdown) {
-      dropdown.classList.remove('dropdown--active');
-    });
+  document.addEventListener('click', function (evt) {
+    return closeAllDropdowns(evt);
+  });
+  function closeAllDropdowns(evt) {
+    if (!(evt !== null && evt !== void 0 && evt.target.closest('.dropdown'))) {
+      var activeList = document.querySelectorAll('.dropdown--active');
+      activeList.forEach(function (dropdown) {
+        dropdown.classList.remove('dropdown--active');
+      });
+    }
   }
 });
 
