@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<title>Жалобы</title>
+		<link rel="stylesheet" href="./css/main.css?v=1700260584950">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__top">
+				<div class="container">
+					<div class="header__top-content">
+						<time class="header__date header__date--mobile">10.04.2023</time>
+						<time class="header__date header__date--desktop">Сегодня 10 ноября 2023 г.</time>
+						<div class="header__profile">
+							<div class="header__profile-box">
+								<svg class="header__profile-icon">
+									<use xlink:href="#user"></use>
+								</svg>
+								<p class="header__profile-name">Иванов Павел Иванович</p>
+								<svg class="header__profile-chevron">
+									<use xlink:href="#chevron"></use>
+								</svg>
+							</div>
+							<div class="header__profile-dropdown">
+								<div class="header__profile-dropdown-content">
+									<div class="header__profile-user">
+										<div class="header__profile-user-icon-box">
+											<svg class="header__profile-user-icon">
+												<use xlink:href="#user"></use>
+											</svg>
+										</div>
+										<div class="header__profile-user-data">
+											<p class="header__profile-user-name">Иванов Павел Иванович</p>
+											<p class="header__profile-user-email">Ivanova.Irina@.ru</p>
+										</div>
+									</div>
+									<ul class="header__profile-list">
+										<li class="header__profile-elem"><a class="header__profile-link" href="#">Ваши данные</a></li>
+										<li class="header__profile-elem"><a class="header__profile-link" href="#">Изменение пароля</a></li>
+										<li class="header__profile-elem"><a class="header__profile-link" href="#">Выход из системы</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="container header__bottom-container"><a class="header__logo-link" hef="./"><img class="header__logo" src="images/logo.png" alt="alt"/>
+						<p class="header__logo-text">Система подачи жалоб на действия судей и работников аппаратов арбитражных судов</p></a>
+					<nav class="header__nav">
+						<ul class="header__nav-list">
+							<li class="header__nav-elem header__nav-elem--dropdown"><span class="header__nav-link">Жалобы
+									<svg class="header__nav-chevron">
+										<use xlink:href="#chevron"></use>
+									</svg></span>
+								<ul class="header__subnav-list">
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Подготовка жалобы</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Все (0)</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Сохраненные (0)</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Отправленные (0)</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Принятые к рассмотрению (0)</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Рассмотрение продлено (0)</a></li>
+									<li class="header__subnav-elem"><a class="header__subnav-link" href="#">Отозванные и перенаправленные (0)</a></li>
+								</ul>
+							</li>
+							<li class="header__nav-elem"><a class="header__nav-link" href="#">Справка</a></li>
+							<li class="header__nav-elem"><a class="header__nav-link" href="#">О системе</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<!-- Breadcrumbs-->
+			<div class="breadcrumbs container">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a>
+						<div class="breadcrumbs__devider"></div>
+					</li>
+					<li class="breadcrumbs__item"><span class="breadcrumbs__current">Подготовка новой жалобы</span></li>
+				</ul>
+			</div>
+			<!-- Page nav-->
+			<div class="container">
+				<div class="page-nav">
+					<ul class="page-nav__list">
+						<li class="page-nav__elem"><a class="page-nav__link page-nav__link--active" href="#">Подготовка жалобы</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Все (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Сохраненные (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Отправленные (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Принятые к рассмотрению (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Рассмотрение продлено (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Отозванные и перенаправленные (0)</a></li>
+						<li class="page-nav__elem"><a class="page-nav__link" href="#">Рассмотренные (0)</a></li>
+					</ul>
+					<!-- Dropdown-->
+					<div class="dropdown dropdown--white-bg page-nav__dropdown">
+						<div class="dropdown__current-box">
+							<input class="dropdown__input" type="hidden" value="Подготовка жалобы"/>
+							<div class="dropdown__current">
+								<div class="dropdown__value">
+									<p class="dropdown__title">Подготовка жалобы</p>
+								</div>
+								<svg class="dropdown__chevron">
+									<use xlink:href="#chevron"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="dropdown__list-box">
+							<ul class="dropdown__list">
+								<li class="dropdown__list-item dropdown__list-item--selected"><a class="dropdown__title" href="#">Подготовка жалобы</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Все (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Сохраненные (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Отправленные (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Принятые к рассмотрению (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Рассмотрение продлено (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Отозванные и перенаправленные (0)</a></li>
+								<li class="dropdown__list-item"><a class="dropdown__title" href="#">Рассмотренные (0)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Section claim-->
+			<section class="section-claim container">
+				<h2 class="heading1 section-claim__title section-claim__title--center">Отправленные жалобы (1)</h2>
+				<div class="section-claim__table-box">
+					<table class="section-claim__table">
+						<tr class="section-claim__table-row">
+							<th class="section-claim__table-header section-claim__table-header--number">Номер</th>
+							<th class="section-claim__table-header section-claim__table-header--date">Дата отправки</th>
+							<th class="section-claim__table-header section-claim__table-header--days">До принятия решения</th>
+							<th class="section-claim__table-header section-claim__table-header--persons">Должностные лица</th>
+							<th class="section-claim__table-header section-claim__table-header--subject">Предмет жалобы</th>
+							<th class="section-claim__table-header section-claim__table-header--actions">Действия</th>
+						</tr>
+						<tr class="section-claim__table-row">
+							<td class="section-claim__table-cell">Ж-А05-11/23</td>
+							<td class="section-claim__table-cell">08.11.2023</td>
+							<td class="section-claim__table-cell">30 дней</td>
+							<td class="section-claim__table-cell">Голота Светлана Ивановна<br>Иванов Павел Иванович</td>
+							<td class="section-claim__table-cell">Иное</td>
+							<td class="section-claim__table-cell">
+								<div class="section-claim__table-actions">
+									<button class="section-claim__table-action">
+										<svg class="section-claim__table-action-icon">
+											<use xlink:href="#eye"></use>
+										</svg>
+									</button>
+									<button class="section-claim__table-action">
+										<svg class="section-claim__table-action-icon">
+											<use xlink:href="#edit"></use>
+										</svg>
+									</button>
+									<button class="section-claim__table-action">
+										<svg class="section-claim__table-action-icon">
+											<use xlink:href="#delete"></use>
+										</svg>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<tr class="section-claim__table-row">
+							<td class="section-claim__table-cell">Ж-А05-11/23</td>
+							<td class="section-claim__table-cell">08.11.2023</td>
+							<td class="section-claim__table-cell">30 дней</td>
+							<td class="section-claim__table-cell">Голота Светлана Ивановна<br>Иванов Павел Иванович</td>
+							<td class="section-claim__table-cell">Иное</td>
+							<td class="section-claim__table-cell">
+								<div class="section-claim__table-actions">
+									<button class="section-claim__table-action">
+										<svg class="section-claim__table-action-icon">
+											<use xlink:href="#eye"></use>
+										</svg>
+									</button>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container"><a class="footer__logo-link" href="./"><img class="footer__logo" src="images/logo.png" alt="alt"/>
+					<p class="footer__logo-text">Система подачи жалоб на действия судей и работников аппаратов арбитражных судов</p></a>
+				<div class="footer__info-box"><a class="footer__error-link footer__info-box-elem" href="#">Сообщить об ошибке</a>
+					<p class="footer__version footer__info-box-elem">Версия 03, 2023г.</p>
+				</div>
+			</div>
+		</footer><svg width="0" height="0" class="hidden">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 9" id="check">
+		<path d="M1 5L4 8L11 1" stroke="#0B45C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check-circle">
+		<path d="M7 13L10 16L17 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="chevron">
+		<path d="M12.667 6.00002L8.70743 9.95958C8.31691 10.3501 7.68374 10.3501 7.29322 9.95958L3.33366 6.00002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" id="clear-circle">
+		<path d="M9.5 9L15.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M15.5 9L9.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<circle cx="12.5" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="delete">
+		<path d="M10 12V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M14 12V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M4 7H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="download">
+		<path d="M12 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5H9.58579C9.851 5 10.1054 5.10536 10.2929 5.29289L12 7H19C20.1046 7 21 7.89543 21 9V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M18.5 14V20M18.5 20L16 17.5M18.5 20L21 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="edit">
+		<path d="M12 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V12M18.4142 8.4142L19.5 7.32845C20.281 6.5474 20.281 5.28108 19.5 4.50003C18.7189 3.71898 17.4526 3.71898 16.6715 4.50004L15.5858 5.58578M18.4142 8.4142L12.3779 14.4506C12.0987 14.7298 11.7431 14.9201 11.356 14.9975L8.41422 15.5859L9.00257 12.6441C9.08001 12.2569 9.27032 11.9013 9.54951 11.6221L15.5858 5.58578M18.4142 8.4142L15.5858 5.58578" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" id="email">
+		<path d="M4.5 7.00005L10.7 11.65C11.7667 12.45 13.2333 12.45 14.3 11.65L20.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M12.5 19H5.5C4.39543 19 3.5 18.1046 3.5 17V7C3.5 5.89543 4.39543 5 5.5 5H19.5C20.6046 5 21.5 5.89543 21.5 7V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+		<path d="M16.5 17L21.5 17M21.5 17L19.5 19M21.5 17L19.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="eye">
+		<path d="M12 5.22728C5.63636 5.22728 2 12.5 2 12.5C2 12.5 2.6278 13.7556 3.81818 15.2234C5.49271 17.2881 8.28049 19.7727 12 19.7727C15.7195 19.7727 18.5073 17.2881 20.1818 15.2234L22 12.5C22 12.5 18.3636 5.22728 12 5.22728Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M14.727 11.1198C14.4261 10.607 13.9658 10.2065 13.4163 9.97946C12.8668 9.75239 12.2581 9.71111 11.683 9.86192C11.1079 10.0127 10.5978 10.3474 10.2304 10.8148C9.863 11.2823 9.65845 11.8571 9.64789 12.4516C9.63733 13.046 9.82133 13.6277 10.1719 14.1079C10.5224 14.5882 11.0203 14.9407 11.5897 15.1119C12.1591 15.283 12.7689 15.2634 13.3261 15.056C13.8833 14.8486 14.3575 14.4647 14.6764 13.9629" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="reload">
+		<path d="M4.82843 7.65685V1.99999M4.82843 7.65685H10.4853M4.82843 7.65685C6.12112 5.95855 7.98542 4.66702 10.0701 4.20935C12.1547 3.75168 14.3342 4.04975 16.2194 5.05036C18.1046 6.05097 19.5729 7.68899 20.3621 9.67202C21.1513 11.655 21.2101 13.854 20.528 15.8764C19.8459 17.8987 18.4672 19.6129 16.6382 20.7128C14.8091 21.8127 12.6487 22.2268 10.5426 21.8812C8.43644 21.5356 6.52168 20.4527 5.14009 18.8259C3.75849 17.1991 3 15.1343 3 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" id="save">
+		<path d="M4.5 6C4.5 4.89543 5.39543 4 6.5 4H12.5H14.6716C15.202 4 15.7107 4.21071 16.0858 4.58579L19.9142 8.41421C20.2893 8.78929 20.5 9.29799 20.5 9.82843V12V18C20.5 19.1046 19.6046 20 18.5 20H6.5C5.39543 20 4.5 19.1046 4.5 18V6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M8.5 4H13.5V7C13.5 7.55228 13.0523 8 12.5 8H9.5C8.94772 8 8.5 7.55228 8.5 7V4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M7.5 15C7.5 13.8954 8.39543 13 9.5 13H15.5C16.6046 13 17.5 13.8954 17.5 15V20H7.5V15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+		<circle cx="11" cy="11" r="5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></circle>
+		<path d="M14.75 14.75L18.5 18.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="user">
+		<path d="M5 20V19C5 16.2386 7.23858 14 10 14H14C16.7614 14 19 16.2386 19 19V20M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" id="add">
+		<path d="M7.5 12L12.5 12M12.5 12L17.5 12M12.5 12V7M12.5 12L12.5 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="attachment">
+		<path d="M16.6706 8.43338C16.904 8.66671 16.904 9.03338 16.6706 9.26671L10.0373 15.9C8.93729 17 7.67063 17.6 6.4873 17.6C6.1873 17.6 5.8873 17.5667 5.5873 17.4833C4.42063 17.1667 3.52062 16.2667 3.20395 15.05C2.80395 13.55 3.33729 11.9167 4.68729 10.5667L12.0706 3.18338C13.2706 1.98338 14.9373 2.36669 15.904 3.33336C17.2206 4.65003 16.854 6.20003 15.9706 7.08336L8.52062 14.5334C7.53729 15.5167 6.42062 15.45 5.85396 14.8667C5.28729 14.2834 5.22062 13.2 6.20395 12.2L11.2373 7.16669C11.4706 6.93336 11.8373 6.93336 12.0706 7.16669C12.304 7.40003 12.304 7.76669 12.0706 8.00003L7.03729 13.0334C6.60395 13.4667 6.53729 13.8834 6.68729 14.05C6.85396 14.2167 7.27062 14.15 7.70395 13.7167L15.154 6.26671C15.904 5.51671 15.5873 4.66669 15.0873 4.16669C14.5206 3.60003 13.604 3.31669 12.904 4.03335L5.52062 11.4167C4.47062 12.4667 4.0373 13.6834 4.3373 14.7667C4.55396 15.5667 5.1373 16.1667 5.90397 16.3667C6.9373 16.65 8.12064 16.1834 9.22064 15.0834L15.854 8.45002C16.0706 8.21669 16.4373 8.21671 16.6706 8.43338Z" fill="currentColor"></path>
+	</symbol>
+</svg>
+
+		<script src="./js/vendor.js?v=1700260584952"></script>
+		<script src="./js/main.js?v=1700260584952"></script>
+	</body>
+</html>
